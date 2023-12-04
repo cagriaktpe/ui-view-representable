@@ -17,11 +17,11 @@ struct CustomUIViewRepresentableView: View {
             
             TextField("Placeholder", text: $text)
                 .frame(height: 55)
-                .background(Color.gray)
+                .background(Color(.systemGroupedBackground))
             
-            UITextFieldViewRepresentable(text: $text)
+            UITextFieldViewRepresentable(text: $text, placeholder: "Type here")
                 .frame(height: 55)
-                .background(Color.gray)
+                .background(Color(.systemGroupedBackground))
         }
     }
 }
@@ -47,6 +47,14 @@ struct BasicUIViewRepresentable: UIViewRepresentable {
 struct UITextFieldViewRepresentable: UIViewRepresentable {
     
     @Binding var text: String
+    let placeholder: String
+    let placeholderColor: UIColor
+    
+    init(text: Binding<String>, placeholder: String, placeholderColor: UIColor = .systemBlue) {
+        self._text = text
+        self.placeholder = placeholder
+        self.placeholderColor = placeholderColor
+    }
     
     func makeUIView(context: Context) -> UITextField {
         let textField = getTextField()
@@ -79,7 +87,7 @@ struct UITextFieldViewRepresentable: UIViewRepresentable {
     
     private func getTextField() -> UITextField {
         let textField = UITextField(frame: .zero)
-        let placeholder = NSAttributedString(string: "Placeholder", attributes: [.foregroundColor: UIColor.red])
+        let placeholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: placeholderColor])
         textField.attributedPlaceholder = placeholder
         return textField
     }
