@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct CustomUIViewRepresentableView: View {
+    
+    @State private var text: String = ""
+    
     var body: some View {
         VStack {
             Text("Hello, world!")
-            BasicUIViewRepresentable()
-             
+            
+            TextField("Placeholder", text: $text)
+                .frame(height: 55)
+                .background(Color.gray)
+            
+            UITextFieldViewRepresentable()
+                .frame(height: 55)
+                .background(Color.gray)
         }
     }
 }
@@ -33,4 +42,22 @@ struct BasicUIViewRepresentable: UIViewRepresentable {
         // Update the view
     }
     
+}
+
+struct UITextFieldViewRepresentable: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> some UIView {
+        return getTextField()
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+    
+    private func getTextField() -> UITextField {
+        let textField = UITextField(frame: .zero)
+        let placeholder = NSAttributedString(string: "Placeholder", attributes: [.foregroundColor: UIColor.red])
+        textField.attributedPlaceholder = placeholder
+        return textField
+    }
 }
