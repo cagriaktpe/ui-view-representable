@@ -13,13 +13,13 @@ struct CustomUIViewRepresentableView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, world!")
+            Text(text)
             
             TextField("Placeholder", text: $text)
                 .frame(height: 55)
                 .background(Color.gray)
             
-            UITextFieldViewRepresentable()
+            UITextFieldViewRepresentable(text: $text)
                 .frame(height: 55)
                 .background(Color.gray)
         }
@@ -46,12 +46,33 @@ struct BasicUIViewRepresentable: UIViewRepresentable {
 
 struct UITextFieldViewRepresentable: UIViewRepresentable {
     
+    @Binding var text: String
+    
     func makeUIView(context: Context) -> some UIView {
-        return getTextField()
+        let textField = getTextField()
+        textField.delegate = context.coordinator
+        return textField
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(text: $text)
+    }
+    
+    class Coordinator: NSObject, UITextFieldDelegate {
+        
+        @Binding var text: String
+        
+        init(text: Binding<String>) {
+            self._text = text
+        }
+        
+        func textFieldDidChangeSelection(_ textField: UITextField) {
+            text = textField.text ?? ""
+        }
     }
     
     private func getTextField() -> UITextField {
