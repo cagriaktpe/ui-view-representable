@@ -11,6 +11,7 @@
 		818FFDBC2B1DD05E0099D7FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FFDBB2B1DD05E0099D7FF /* ContentView.swift */; };
 		818FFDBE2B1DD0600099D7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818FFDBD2B1DD0600099D7FF /* Assets.xcassets */; };
 		818FFDC12B1DD0600099D7FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818FFDC02B1DD0600099D7FF /* Preview Assets.xcassets */; };
+		818FFDC82B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FFDC72B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		818FFDBB2B1DD05E0099D7FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		818FFDBD2B1DD0600099D7FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		818FFDC02B1DD0600099D7FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		818FFDC72B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewRepresentableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				818FFDBB2B1DD05E0099D7FF /* ContentView.swift */,
 				818FFDBD2B1DD0600099D7FF /* Assets.xcassets */,
 				818FFDBF2B1DD0600099D7FF /* Preview Content */,
+				818FFDC72B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift */,
 			);
 			path = UIViewRepresentable;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				818FFDBC2B1DD05E0099D7FF /* ContentView.swift in Sources */,
 				818FFDBA2B1DD05E0099D7FF /* UIViewRepresentableApp.swift in Sources */,
+				818FFDC82B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
