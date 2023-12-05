@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8144ACF72B1E00E0007C0B5A /* UIViewControllerRepresentableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144ACF62B1E00E0007C0B5A /* UIViewControllerRepresentableTextView.swift */; };
 		818FFDBA2B1DD05E0099D7FF /* UIViewRepresentableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FFDB92B1DD05E0099D7FF /* UIViewRepresentableApp.swift */; };
 		818FFDBC2B1DD05E0099D7FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FFDBB2B1DD05E0099D7FF /* ContentView.swift */; };
 		818FFDBE2B1DD0600099D7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818FFDBD2B1DD0600099D7FF /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8144ACF62B1E00E0007C0B5A /* UIViewControllerRepresentableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableTextView.swift; sourceTree = "<group>"; };
 		818FFDB62B1DD05E0099D7FF /* UIViewRepresentable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewRepresentable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		818FFDB92B1DD05E0099D7FF /* UIViewRepresentableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableApp.swift; sourceTree = "<group>"; };
 		818FFDBB2B1DD05E0099D7FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,9 +57,10 @@
 			children = (
 				818FFDB92B1DD05E0099D7FF /* UIViewRepresentableApp.swift */,
 				818FFDBB2B1DD05E0099D7FF /* ContentView.swift */,
+				818FFDC72B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift */,
+				8144ACF62B1E00E0007C0B5A /* UIViewControllerRepresentableTextView.swift */,
 				818FFDBD2B1DD0600099D7FF /* Assets.xcassets */,
 				818FFDBF2B1DD0600099D7FF /* Preview Content */,
-				818FFDC72B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift */,
 			);
 			path = UIViewRepresentable;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				818FFDBC2B1DD05E0099D7FF /* ContentView.swift in Sources */,
 				818FFDBA2B1DD05E0099D7FF /* UIViewRepresentableApp.swift in Sources */,
 				818FFDC82B1DD5FB0099D7FF /* CustomUIViewRepresentableView.swift in Sources */,
+				8144ACF72B1E00E0007C0B5A /* UIViewControllerRepresentableTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
