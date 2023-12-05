@@ -31,21 +31,31 @@ struct BasicUIViewControllerRepresentable: UIViewControllerRepresentable {
     let labelText: String
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBlue
-        
-        let label = UILabel()
-        label.text = labelText
-        label.textColor = UIColor.white
-        
-        vc.view.addSubview(label)
-        label.frame = vc.view.frame
-        
+        let vc = MyFirstViewController()
+        vc.labelText = labelText
         return vc
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
+    }
+}
+
+class MyFirstViewController: UIViewController {
+    
+    var labelText: String = "Starting value"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .systemBlue
+        
+        let label = UILabel()
+        label.text = labelText
+        label.textColor = UIColor.white
+        
+        view.addSubview(label)
+        label.frame = view.frame
     }
 }
 
